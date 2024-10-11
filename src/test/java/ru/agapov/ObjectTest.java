@@ -2,7 +2,7 @@ package ru.agapov;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /*
  * Class for testing behavior of class Object
@@ -14,6 +14,6 @@ public class ObjectTest {
         String expectedStringRepresentation = "java.lang.Object@" + Integer.toHexString(object.hashCode());
         String objectStringRepresentation = object.toString();
 
-        assertEquals(objectStringRepresentation, expectedStringRepresentation);
+        assertThat(objectStringRepresentation).isEqualTo(expectedStringRepresentation);
     }
 }
