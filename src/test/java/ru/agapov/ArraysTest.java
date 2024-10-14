@@ -18,4 +18,16 @@ public class ArraysTest {
 
         assertThat(arrayStringRepresentation).isEqualTo(expectedArrayStringRepresentation);
     }
+
+    @Test
+    public void successfullyReturnsDeepStringRepresentationOfArray() {
+        Object[] array = {1,new int[]{2,3,4},5,6, new int[]{7,8,9,10}};
+        String expectedArrayDeepStringRepresentation = "[1, [2, 3, 4], 5, 6, [7, 8, 9, 10]]";
+
+
+        String arrayDeepStringRepresentation = Arrays.deepToString(array);
+
+
+        assertThat(arrayDeepStringRepresentation).isEqualTo(expectedArrayDeepStringRepresentation);
+    }
 }
