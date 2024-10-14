@@ -39,3 +39,4 @@ build/
 .idea/encodings.xml
 .idea/misc.xml
 .idea/jpa-buddy.xml
+src/main/java/ru/agapov/App.java
