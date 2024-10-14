@@ -3,7 +3,9 @@ package ru.agapov;
 
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
-import static org.assertj.core.api.Assertions.assertThat;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 
 public class ArraysTest {
@@ -16,7 +18,7 @@ public class ArraysTest {
         String arrayStringRepresentation = Arrays.toString(array);
 
 
-        assertThat(arrayStringRepresentation).isEqualTo(expectedArrayStringRepresentation);
+        assertThat(arrayStringRepresentation, equalTo(expectedArrayStringRepresentation));
     }
 
     @Test
@@ -28,6 +30,6 @@ public class ArraysTest {
         String arrayDeepStringRepresentation = Arrays.deepToString(array);
 
 
-        assertThat(arrayDeepStringRepresentation).isEqualTo(expectedArrayDeepStringRepresentation);
+        assertThat(arrayDeepStringRepresentation, equalTo(expectedArrayDeepStringRepresentation));
     }
 }

@@ -2,7 +2,8 @@ package ru.agapov;
 
 
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 
 public class ObjectTest {
@@ -15,6 +16,6 @@ public class ObjectTest {
         String objectStringRepresentation = object.toString();
 
 
-        assertThat(objectStringRepresentation).isEqualTo(expectedStringRepresentation);
+        assertThat(objectStringRepresentation, equalTo(expectedStringRepresentation));
     }
 }
