@@ -1,4 +1,4 @@
-package ru.agapov;
+package ru.agapov.tests;
 
 
 import org.junit.jupiter.api.Test;

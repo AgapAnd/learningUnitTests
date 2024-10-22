@@ -42,3 +42,4 @@ build/
 src/main/java/ru/agapov/App.java
 .idea/workspace.xml
 .idea/vcs.xml
+.idea/uiDesigner.xml
