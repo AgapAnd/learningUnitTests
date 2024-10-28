@@ -23,4 +23,21 @@ public class SwapValuesTest {
         assertThat(firstVar, equalTo(expectedValueOfFirstVariable));
         assertThat(secondVar, equalTo(expectedValueOfSecondVariable));
     }
+
+    @Test
+    public void successfullyReturnsSwappedValuesOfTwoVariablesWithoutUsingTemporaryVariable() {
+        int firstVar = 1;
+        int secondVar = 2;
+        int expectedValueOfFirstVariable = 2;
+        int expectedValueOfSecondVariable = 1;
+
+
+        firstVar += secondVar;
+        secondVar = firstVar - secondVar;
+        firstVar -= secondVar;
+
+
+        assertThat(firstVar, equalTo(expectedValueOfFirstVariable));
+        assertThat(secondVar, equalTo(expectedValueOfSecondVariable));
+    }
 }
