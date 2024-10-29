@@ -9,8 +9,8 @@ import static org.hamcrest.Matchers.equalTo;
 public class ObjectTest {
     @Test
     public void successfullyReturnsStringRepresentationOfItself() {
-        Object object = new Object();
-        String expectedStringRepresentation = "java.lang.Object@" + Integer.toHexString(object.hashCode());
+        final Object object = new Object();
+        final String expectedStringRepresentation = "java.lang.Object@" + Integer.toHexString(object.hashCode());
 
 
         String objectStringRepresentation = object.toString();

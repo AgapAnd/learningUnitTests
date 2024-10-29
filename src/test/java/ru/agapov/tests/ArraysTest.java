@@ -11,8 +11,8 @@ import static org.hamcrest.Matchers.equalTo;
 public class ArraysTest {
     @Test
     public void successfullyReturnsStringRepresentationOfArray() {
-        int[] array = {1, 2, 3, 4, 5};
-        String expectedArrayStringRepresentation = "[1, 2, 3, 4, 5]";
+        final int[] array = {1, 2, 3, 4, 5};
+        final String expectedArrayStringRepresentation = "[1, 2, 3, 4, 5]";
 
 
         String arrayStringRepresentation = Arrays.toString(array);
@@ -24,8 +24,8 @@ public class ArraysTest {
 
     @Test
     public void successfullyReturnsDeepStringRepresentationOfArray() {
-        Object[] array = {1, new int[]{2, 3, 4}, 5, 6, new int[]{7, 8, 9, 10}};
-        String expectedArrayDeepStringRepresentation = "[1, [2, 3, 4], 5, 6, [7, 8, 9, 10]]";
+        final Object[] array = {1, new int[]{2, 3, 4}, 5, 6, new int[]{7, 8, 9, 10}};
+        final String expectedArrayDeepStringRepresentation = "[1, [2, 3, 4], 5, 6, [7, 8, 9, 10]]";
 
 
         String arrayDeepStringRepresentation = Arrays.deepToString(array);

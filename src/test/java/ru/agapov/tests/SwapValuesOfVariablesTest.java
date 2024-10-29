@@ -5,14 +5,14 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class SwapValuesTest {
+public class SwapValuesOfVariablesTest {
     @Test
-    public void successfullyReturnsSwappedValuesOfTwoVariablesUsingTemporaryVariable() {
+    public void successfullySwapValuesOfTwoVariablesUsingTemporaryVariable() {
         int firstVar = 1;
         int secondVar = 2;
         int tempVar = 0;
-        int expectedValueOfFirstVariable = 2;
-        int expectedValueOfSecondVariable = 1;
+        final int expectedValueOfFirstVariable = 2;
+        final int expectedValueOfSecondVariable = 1;
 
 
         tempVar = firstVar;
@@ -25,11 +25,11 @@ public class SwapValuesTest {
     }
 
     @Test
-    public void successfullyReturnsSwappedValuesOfTwoVariablesWithoutUsingTemporaryVariable() {
+    public void successfullySwapValuesOfTwoVariablesWithoutUsingTemporaryVariable() {
         int firstVar = 1;
         int secondVar = 2;
-        int expectedValueOfFirstVariable = 2;
-        int expectedValueOfSecondVariable = 1;
+        final int expectedValueOfFirstVariable = 2;
+        final int expectedValueOfSecondVariable = 1;
 
 
         firstVar += secondVar;
