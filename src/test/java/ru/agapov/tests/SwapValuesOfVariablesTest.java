@@ -40,4 +40,21 @@ public class SwapValuesOfVariablesTest {
         assertThat(firstVar, equalTo(expectedValueOfFirstVariable));
         assertThat(secondVar, equalTo(expectedValueOfSecondVariable));
     }
+
+    @Test
+    public void successfullySwapValuesOfTwoVariablesUsingXOR() {
+        int firstVar = 1;
+        int secondVar = 2;
+        final int expectedValueOfFirstVariable = 2;
+        final int expectedValueOfSecondVariable = 1;
+
+
+        firstVar ^= secondVar;
+        secondVar ^= firstVar;
+        firstVar ^= secondVar;
+
+
+        assertThat(firstVar, equalTo(expectedValueOfFirstVariable));
+        assertThat(secondVar, equalTo(expectedValueOfSecondVariable));
+    }
 }
