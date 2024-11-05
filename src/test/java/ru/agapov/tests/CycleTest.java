@@ -7,16 +7,43 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class CycleTest {
     @Test
-    public void successfullyReturnsValuesOfIndexOfCycle() {
-        final int[] expectedValuesOfCycleIndex = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int[] valuesOfCycleIndex = new int[10];
+    public void successfullyOutputsValuesOfVariableOfIndexOfCycle() {
+        final String expectedValuesOfVariableOfIndexOfCycle = "0123456789";
+        StringBuilder valuesOfVariableOfIndexOfCycle = new StringBuilder();
 
 
-        for (int i = 0; i < 10; i++) {
-            valuesOfCycleIndex[i] = i;
+        for (int indexOfCycle = 0; indexOfCycle < 10; indexOfCycle++) {
+            valuesOfVariableOfIndexOfCycle.append(indexOfCycle);
         }
 
-        
-        assertThat(valuesOfCycleIndex, equalTo(expectedValuesOfCycleIndex));
+
+        assertThat(expectedValuesOfVariableOfIndexOfCycle, equalTo(valuesOfVariableOfIndexOfCycle.toString()));
+    }
+    @Test
+    public void successfullyOutputsValuesOfVariableOfIndexOfCycleWithIncrementOfTwo() {
+        final String expectedValuesOfVariableOfIndexOfCycle = "02468";
+        StringBuilder valuesOfVariableOfIndexOfCycle = new StringBuilder();
+
+
+        for (int indexOfCycle = 0; indexOfCycle < 10; indexOfCycle += 2) {
+            valuesOfVariableOfIndexOfCycle.append(indexOfCycle);
+        }
+
+
+        assertThat(expectedValuesOfVariableOfIndexOfCycle, equalTo(valuesOfVariableOfIndexOfCycle.toString()));
+    }
+
+    @Test
+    public void successfullyOutputsValuesOfVariableOfIndexOfCycleInReverseOrder() {
+        final String expectedValuesOfVariableOfIndexOfCycle = "9876543210";
+        StringBuilder valuesOfVariableOfIndexOfCycle = new StringBuilder();
+
+
+        for (int indexOfCycle = 9; indexOfCycle >= 0; indexOfCycle--) {
+            valuesOfVariableOfIndexOfCycle.append(indexOfCycle);
+        }
+
+
+        assertThat(expectedValuesOfVariableOfIndexOfCycle, equalTo(valuesOfVariableOfIndexOfCycle.toString()));
     }
 }
